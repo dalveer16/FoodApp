@@ -5,7 +5,7 @@ import CartContext from "../../store/cart-context";
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
   console.log(cartCtx);
-  // const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
 
   const hasItems = cartCtx.items.lenght > 0;
 
@@ -21,7 +21,7 @@ const Cart = (props) => {
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
-        {/* <span>{totalAmount}</span> */}
+        <span>{totalAmount}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} onClick={props.onClose}>
